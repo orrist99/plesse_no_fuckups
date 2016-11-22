@@ -120,6 +120,42 @@
   <ItemGroup>
     <None Include="Resources\backgroundtest.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariofloor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariofloor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariosky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariobackgroundtest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariocloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariobush.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bush2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bushpaint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bushpaint2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mario8bit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
