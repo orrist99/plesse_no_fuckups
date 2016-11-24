@@ -22,6 +22,7 @@ namespace _8_bit_lok
         public Form1()
         {
             InitializeComponent();
+            
 
             //player.Top = screen.Height - player.Height;
         }
@@ -35,7 +36,7 @@ namespace _8_bit_lok
         private void time1_Tick(object sender, EventArgs e)
         {
 
-
+            
 
             //vinstri hlið á pipu
             if (player.Right > pipe.Left && player.Left < pipe.Right - player.Width / 2 && player.Bottom > pipe.Top)
@@ -44,12 +45,40 @@ namespace _8_bit_lok
             }
 
 
+            //wall left 
+            //svo player fari ekki af mapinu á vinstri hlið
+            if (player.Right > pipe.Left && player.Left < pipe.Right - player.Width / 2 && player.Bottom > pipe.Top)
+            {
+                right = false;
+            }
+
+
+            //wall right
+            //svo player fari ekki af map á hægri hlið
+
+            if (player.Left > WallRight.Right && player.Right < WallRight.Left - player.Width / 2 && player.Bottom > WallRight.Top)
+            {
+                left = false;
+            }
+
+
+
+
+            //þegar player kemur við hlut
+           /* if (player.Bounds.IntersectsWith(pipe.Bounds));
+            {
+                MessageBox.Show("hello");
+            }
+            */
+
+
             //hægri hlið á pipu
             if (player.Left < pipe.Right && player.Right > pipe.Left + player.Width / 2 && player.Bottom > pipe.Top)
             {
                 left = false;
             }
 
+            
 
             
 

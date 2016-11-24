@@ -73,6 +73,16 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bird {
+            get {
+                object obj = ResourceManager.GetObject("bird", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bush {
             get {
                 object obj = ResourceManager.GetObject("bush", resourceCulture);
@@ -116,6 +126,16 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap cloud {
             get {
                 object obj = ResourceManager.GetObject("cloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cubic5 {
+            get {
+                object obj = ResourceManager.GetObject("cubic5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +316,16 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap pipe3 {
             get {
                 object obj = ResourceManager.GetObject("pipe3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sky {
+            get {
+                object obj = ResourceManager.GetObject("sky", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
