@@ -73,9 +73,39 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap capm {
+            get {
+                object obj = ResourceManager.GetObject("capm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap capm1 {
+            get {
+                object obj = ResourceManager.GetObject("capm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dirt {
             get {
                 object obj = ResourceManager.GetObject("dirt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap faly {
+            get {
+                object obj = ResourceManager.GetObject("faly", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,26 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap imgres1 {
             get {
                 object obj = ResourceManager.GetObject("imgres1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll {
+            get {
+                object obj = ResourceManager.GetObject("ll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap luigi {
+            get {
+                object obj = ResourceManager.GetObject("luigi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +206,16 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap pipe {
             get {
                 object obj = ResourceManager.GetObject("pipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pipe1 {
+            get {
+                object obj = ResourceManager.GetObject("pipe1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.canv1 = new System.Windows.Forms.Panel();
             this.screen = new System.Windows.Forms.Panel();
-            this.player = new System.Windows.Forms.PictureBox();
-            this.pipe = new System.Windows.Forms.PictureBox();
             this.time1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.player = new System.Windows.Forms.PictureBox();
+            this.pipe = new System.Windows.Forms.PictureBox();
             this.canv1.SuspendLayout();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -61,13 +61,19 @@
             this.screen.Size = new System.Drawing.Size(1200, 700);
             this.screen.TabIndex = 1;
             // 
+            // time1
+            // 
+            this.time1.Enabled = true;
+            this.time1.Interval = 1;
+            this.time1.Tick += new System.EventHandler(this.time1_Tick);
+            // 
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::_8_bit_lok.Properties.Resources.mario2;
-            this.player.Location = new System.Drawing.Point(31, 394);
+            this.player.Image = global::_8_bit_lok.Properties.Resources.ll;
+            this.player.Location = new System.Drawing.Point(188, 225);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(151, 203);
+            this.player.Size = new System.Drawing.Size(185, 312);
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             // 
@@ -81,12 +87,6 @@
             this.pipe.Size = new System.Drawing.Size(140, 213);
             this.pipe.TabIndex = 0;
             this.pipe.TabStop = false;
-            // 
-            // time1
-            // 
-            this.time1.Enabled = true;
-            this.time1.Interval = 1;
-            this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
             // Form1
             // 
