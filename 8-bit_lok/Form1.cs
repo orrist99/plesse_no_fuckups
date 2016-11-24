@@ -44,32 +44,21 @@ namespace _8_bit_lok
                 right = false;
             }
 
-
-            //wall left 
-            //svo player fari ekki af mapinu á vinstri hlið
-            if (player.Right > pipe.Left && player.Left < pipe.Right - player.Width / 2 && player.Bottom > pipe.Top)
-            {
-                right = false;
-            }
-
-
-            //wall right
-            //svo player fari ekki af map á hægri hlið
-
-            if (player.Left > WallRight.Right && player.Right < WallRight.Left - player.Width / 2 && player.Bottom > WallRight.Top)
+            //vinstri vegur
+            if (player.Left < WallLeft.Right && player.Right > WallLeft.Left + player.Width / 2 && player.Bottom > WallLeft.Top)
             {
                 left = false;
             }
 
-
-
+            
+           
 
             //þegar player kemur við hlut
-           /* if (player.Bounds.IntersectsWith(pipe.Bounds));
-            {
-                MessageBox.Show("hello");
-            }
-            */
+            /* if (player.Bounds.IntersectsWith(pipe.Bounds));
+             {
+                 MessageBox.Show("hello");
+             }WallLeft
+             */
 
 
             //hægri hlið á pipu
@@ -78,7 +67,11 @@ namespace _8_bit_lok
                 left = false;
             }
 
-            
+            //hægri hlið á pipu
+            if (player.Right > WallRight.Left && player.Left < WallRight.Right - player.Width / 2 && player.Bottom > WallRight.Top)
+            {
+                right = false;
+            }
 
             
 
