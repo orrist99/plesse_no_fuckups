@@ -25,6 +25,7 @@ namespace _8_bit_lok
             
 
             //player.Top = screen.Height - player.Height;
+
         }
 
         
@@ -53,12 +54,8 @@ namespace _8_bit_lok
             
            
 
-            //þegar player kemur við hlut
-            /* if (player.Bounds.IntersectsWith(pipe.Bounds));
-             {
-                 MessageBox.Show("hello");
-             }WallLeft
-             */
+            
+
 
 
             //hægri hlið á pipu
@@ -73,7 +70,12 @@ namespace _8_bit_lok
                 right = false;
             }
 
-            
+
+
+      
+              
+
+
 
             if (right == true)
             {
@@ -115,6 +117,25 @@ namespace _8_bit_lok
                 player.Image = Image.FromFile("stand.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
 
 
+
+             
+            }
+
+
+
+            //test --------------------------------------
+            //þegar player kemur við hlut
+            if (player.Left + player.Width - 1 > win.Left && player.Left + player.Width + 5 < win.Left + win.Width + player.Width && player.Top + player.Height >= win.Top && player.Top < win.Top)
+            {
+                player.Top = screen.Height - win.Height - player.Height;
+                
+
+                
+                if (player.Bounds.IntersectsWith(win.Bounds)) ;
+             {
+                 Win end = new Win();
+                 end.Show();
+             }
             }
            
         }
@@ -149,6 +170,7 @@ namespace _8_bit_lok
 
               
             }
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -167,7 +189,7 @@ namespace _8_bit_lok
                 player.Image = Image.FromFile("stand.png");//þegar mario fer til vinstri og stoppar birtist mynd af honum standa
             }
 
-
+            
         }
 
 
