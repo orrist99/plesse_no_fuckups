@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.canv1 = new System.Windows.Forms.Panel();
+            this.screen = new System.Windows.Forms.Panel();
             this.time1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.screen = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.pipe = new System.Windows.Forms.PictureBox();
@@ -62,20 +62,14 @@
             this.canv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.canv1.Location = new System.Drawing.Point(0, 0);
             this.canv1.Name = "canv1";
-            this.canv1.Size = new System.Drawing.Size(1234, 761);
+            this.canv1.Size = new System.Drawing.Size(1668, 761);
             this.canv1.TabIndex = 0;
-            // 
-            // time1
-            // 
-            this.time1.Enabled = true;
-            this.time1.Interval = 1;
-            this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.DodgerBlue;
-            this.screen.Controls.Add(this.pictureBox1);
             this.screen.Controls.Add(this.player);
+            this.screen.Controls.Add(this.pictureBox1);
             this.screen.Controls.Add(this.pipe);
             this.screen.Controls.Add(this.pictureBox2);
             this.screen.Controls.Add(this.pictureBox3);
@@ -86,25 +80,32 @@
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(1234, 761);
+            this.screen.Size = new System.Drawing.Size(1668, 761);
             this.screen.TabIndex = 1;
+            // 
+            // time1
+            // 
+            this.time1.Enabled = true;
+            this.time1.Interval = 1;
+            this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 751);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 751);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1230, 10);
+            this.pictureBox1.Size = new System.Drawing.Size(1668, 10);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::_8_bit_lok.Properties.Resources.mario2;
-            this.player.Location = new System.Drawing.Point(43, 234);
+            this.player.Image = global::_8_bit_lok.Properties.Resources.stand;
+            this.player.Location = new System.Drawing.Point(150, 442);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(157, 197);
+            this.player.Size = new System.Drawing.Size(16, 32);
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             // 
@@ -112,10 +113,10 @@
             // 
             this.pipe.BackColor = System.Drawing.Color.Transparent;
             this.pipe.Image = ((System.Drawing.Image)(resources.GetObject("pipe.Image")));
-            this.pipe.Location = new System.Drawing.Point(475, 560);
+            this.pipe.Location = new System.Drawing.Point(475, 600);
             this.pipe.Margin = new System.Windows.Forms.Padding(0);
             this.pipe.Name = "pipe";
-            this.pipe.Size = new System.Drawing.Size(140, 213);
+            this.pipe.Size = new System.Drawing.Size(140, 173);
             this.pipe.TabIndex = 0;
             this.pipe.TabStop = false;
             // 
@@ -189,7 +190,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1234, 761);
+            this.ClientSize = new System.Drawing.Size(1668, 761);
             this.Controls.Add(this.canv1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

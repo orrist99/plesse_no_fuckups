@@ -15,13 +15,15 @@ namespace _8_bit_lok
         bool right;
         bool left;
         bool jump;
-        int G = 35;
+        int G = 25;
         int force;
         
 
         public Form1()
         {
             InitializeComponent();
+
+            player.Top = screen.Height - player.Height;
         }
 
         
@@ -69,6 +71,10 @@ namespace _8_bit_lok
           if (player.Top + player.Height >= screen.Height)
           {
               player.Top  = screen.Height - player.Height;//fall hættir á bottinum
+              if (jump == true)
+              {
+                  player.Image = Image.FromFile("stand.png");//mynd breytist þegar player er buinn ad hoppa og stendur kyrr
+              }
               jump = false;
           }
           else
@@ -83,6 +89,9 @@ namespace _8_bit_lok
                 player.Top = screen.Height - pipe.Height - player.Height;
                 force = 0;
                 jump = false;
+                player.Image = Image.FromFile("stand.png");
+
+
             }
            
         }
@@ -92,11 +101,13 @@ namespace _8_bit_lok
             if (e.KeyCode == Keys.Right)
             {
                 right = true;
+                player.Image = Image.FromFile("walk_r.gif");
             }
 
             if (e.KeyCode == Keys.Left)
             {
                 left = true;
+                player.Image = Image.FromFile("walk_l.gif");
             }
 
             if (e.KeyCode == Keys.Escape)
@@ -110,6 +121,7 @@ namespace _8_bit_lok
                 {
                     jump = true;
                     force = G;
+                    player.Image = Image.FromFile("jump.png");
                 }
 
               
@@ -121,15 +133,21 @@ namespace _8_bit_lok
             if (e.KeyCode == Keys.Right)
             {
                 right = false;
+                player.Image = Image.FromFile("stand.png");
+                
             }
 
             if (e.KeyCode == Keys.Left)
             {
                 left = false;
+
+                player.Image = Image.FromFile("stand.png");
             }
 
 
         }
+
+
 
        
     }
