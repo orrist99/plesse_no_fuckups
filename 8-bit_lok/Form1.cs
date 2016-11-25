@@ -42,12 +42,12 @@ namespace _8_bit_lok
             index++;
             if (right == true && index % 15 == 0)
             {
-                player.Image = Image.FromFile("marioandyosi.gif");
+                player.Image = Image.FromFile("marioandyoshi.gif");
             }
 
             if (left == true && index % 15 == 0 )
             {
-                player.Image = Image.FromFile("marioandyosi.gif");
+                player.Image = Image.FromFile("marioandyoshi2.gif");
             }
 
             //vinstri hlið á pipu
@@ -188,9 +188,11 @@ namespace _8_bit_lok
                 
                 if (player.Bounds.IntersectsWith(win.Bounds)) ;
              {
-
+                 
                  Win end = new Win();
                  end.Show();
+
+                 
 
                  
              }

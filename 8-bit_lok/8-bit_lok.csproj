@@ -75,6 +75,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Win.resx">
+      <DependentUpon>Win.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,6 +189,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\mariowin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireworks.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireworks2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireworks3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireworks4.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
