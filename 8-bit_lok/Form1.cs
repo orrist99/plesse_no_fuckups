@@ -17,6 +17,7 @@ namespace _8_bit_lok
         bool jump;
         int G = 25;//hversu hátt mario fer up þegar hann hoppar
         int force;
+        int index = 0;
         
 
         public Form1()
@@ -37,7 +38,17 @@ namespace _8_bit_lok
         private void time1_Tick(object sender, EventArgs e)
         {
 
-            
+            //hlaupa gif spilar replayar
+            index++;
+            if (right == true && index % 15 == 0)
+            {
+                player.Image = Image.FromFile("marioandyosi.gif");
+            }
+
+            if (left == true && index % 15 == 0 )
+            {
+                player.Image = Image.FromFile("marioandyosi.gif");
+            }
 
             //vinstri hlið á pipu
             if (player.Right > pipe.Left && player.Left < pipe.Right - player.Width / 2 && player.Bottom > pipe.Top)
@@ -58,14 +69,28 @@ namespace _8_bit_lok
 
 
 
-            //hægri hlið á pipu
+            //hægri hlið á wall
             if (player.Left < pipe.Right && player.Right > pipe.Left + player.Width / 2 && player.Bottom > pipe.Top)
             {
                 left = false;
             }
 
-            //hægri hlið á pipu
+            //hægri hlið á wall
             if (player.Right > WallRight.Left && player.Left < WallRight.Right - player.Width / 2 && player.Bottom > WallRight.Top)
+            {
+                right = false;
+            }
+
+
+
+            //hægri hlið á block
+            if (player.Left < block.Right && player.Right > block.Left + player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
+            {
+                left = false;
+            }
+
+            //hægri hlið á block
+            if (player.Right > block.Left && player.Left < WallRight.Right - player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
             {
                 right = false;
             }
@@ -79,11 +104,11 @@ namespace _8_bit_lok
 
             if (right == true)
             {
-               player.Left += 5;
+               player.Left += 3;
             }
             if (left == true)
             {
-                player.Left -= 5;
+                player.Left -= 3;
             }
             //jump
           if (jump == true)
@@ -93,33 +118,63 @@ namespace _8_bit_lok
                 force -= 1;
             }
 
+
+
+
+
+
           if (player.Top + player.Height >= screen.Height)
           {
               player.Top  = screen.Height - player.Height;//fall hættir á bottinum
               if (jump == true)
               {
-                  player.Image = Image.FromFile("stand.png");//mynd breytist þegar player er buinn ad hoppa og stendur kyrr
+                  player.Image = Image.FromFile("marioyoshi.png");//mynd breytist þegar player er buinn ad hoppa og stendur kyrr
               }
               jump = false;
           }
+
+
+            //top á pipu
+            if (player.Left + player.Width > pipe.Left && player.Left + player.Width < pipe.Left + pipe.Width + player.Width && player.Top + player.Height >= pipe.Top && player.Top < pipe.Top)
+            {
+
+                jump = false;
+                force = 0;
+                player.Top = pipe.Location.Y - player.Height;
+                /*
+                player.Top = screen.Height - pipe.Height - player.Height;
+                force = 0;
+                jump = false;
+                player.Image = Image.FromFile("marioyoshi.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
+                */
+             
+            }
+
+                
+
+
           else
           {
               player.Top += 5;
           }
-          
-           //top
-            
-            if (player.Left + player.Width - 1 > pipe.Left && player.Left + player.Width + 5 < pipe.Left + pipe.Width + player.Width && player.Top + player.Height >= pipe.Top && player.Top < pipe.Top)
+            //blacok top
+            if (player.Left + player.Width > pipe.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top + player.Height >= block.Top && player.Top < block.Top)
             {
-                player.Top = screen.Height - pipe.Height - player.Height;
-                force = 0;
+
                 jump = false;
-                player.Image = Image.FromFile("stand.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
-
-
-
-             
+                force = 0;
+                player.Top = block.Location.Y - player.Height;
+               
             }
+
+            //block head
+            if (player.Left + player.Width > block.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top - block.Bottom <= 10 && player.Top - block.Top > -10)
+            {
+                force = -1;
+            }
+           
+            
+            
 
 
 
@@ -133,8 +188,11 @@ namespace _8_bit_lok
                 
                 if (player.Bounds.IntersectsWith(win.Bounds)) ;
              {
+
                  Win end = new Win();
                  end.Show();
+
+                 
              }
             }
            
@@ -145,13 +203,13 @@ namespace _8_bit_lok
             if (e.KeyCode == Keys.Right)
             {
                 right = true;
-                player.Image = Image.FromFile("walk_r.gif");//þessi mynd kemur þegar mario fer til hægri
+                //player.Image = Image.FromFile("marioandyosi.gif");//þessi mynd kemur þegar mario fer til hægri
             }
 
             if (e.KeyCode == Keys.Left)
             {
                 left = true;
-                player.Image = Image.FromFile("walk_l.gif");//þessi mynd kemur þegar mario fer til vinstri
+                //player.Image = Image.FromFile("walk_l.gif");//þessi mynd kemur þegar mario fer til vinstri
             }
 
             if (e.KeyCode == Keys.Escape)
@@ -165,7 +223,7 @@ namespace _8_bit_lok
                 {
                     jump = true;
                     force = G;
-                    player.Image = Image.FromFile("jump.png");//þegar mario jumpar kemur þessi mynd
+                    player.Image = Image.FromFile("marioyoshi.png");//þegar mario jumpar kemur þessi mynd
                 }
 
               
@@ -178,7 +236,7 @@ namespace _8_bit_lok
             if (e.KeyCode == Keys.Right)
             {
                 right = false;
-                player.Image = Image.FromFile("stand.png");//þegar mario fer til hægri og stoppar birtist mynd af honum standa
+                player.Image = Image.FromFile("marioyoshi.png");//þegar mario fer til hægri og stoppar birtist mynd af honum standa
                 
             }
 
@@ -186,7 +244,7 @@ namespace _8_bit_lok
             {
                 left = false;
 
-                player.Image = Image.FromFile("stand.png");//þegar mario fer til vinstri og stoppar birtist mynd af honum standa
+                player.Image = Image.FromFile("marioyoshi.png");//þegar mario fer til vinstri og stoppar birtist mynd af honum standa
             }
 
             

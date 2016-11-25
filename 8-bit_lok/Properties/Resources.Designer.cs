@@ -93,6 +93,16 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bush1 {
+            get {
+                object obj = ResourceManager.GetObject("bush1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bush2 {
             get {
                 object obj = ResourceManager.GetObject("bush2", resourceCulture);
@@ -146,6 +156,16 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap dirt {
             get {
                 object obj = ResourceManager.GetObject("dirt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ground {
+            get {
+                object obj = ResourceManager.GetObject("ground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +306,16 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap marioworld1 {
             get {
                 object obj = ResourceManager.GetObject("marioworld1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marioyoshi {
+            get {
+                object obj = ResourceManager.GetObject("marioyoshi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
