@@ -83,14 +83,28 @@ namespace _8_bit_lok
 
 
 
-            //hægri hlið á block
+            //vinstri hlið á block
             if (player.Left < block.Right && player.Right > block.Left + player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
             {
                 left = false;
             }
 
             //hægri hlið á block
-            if (player.Right > block.Left && player.Left < WallRight.Right - player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
+            if (player.Right > block.Left && player.Left < block.Right - player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
+            {
+                right = false;
+            }
+
+            //---------------------------------------------------------------------------------------------------------//
+
+            //vinstri hlið á block1
+            if (player.Left < block1.Right && player.Right > block1.Left + player.Width && player.Bottom < block1.Bottom && player.Bottom > block1.Top)
+            {
+                left = false;
+            }
+
+            //hægri hlið á block1
+            if (player.Right > block1.Left && player.Left < block1.Right - player.Width && player.Bottom < block1.Bottom && player.Bottom > block1.Top)
             {
                 right = false;
             }
@@ -134,31 +148,31 @@ namespace _8_bit_lok
           }
 
 
+            
+
+         else
+          {
+              player.Top += 5;
+          }
             //top á pipu
-            if (player.Left + player.Width > pipe.Left && player.Left + player.Width < pipe.Left + pipe.Width + player.Width && player.Top + player.Height >= pipe.Top && player.Top < pipe.Top)
+          if (player.Left + player.Width > pipe.Left && player.Left + player.Width < pipe.Left + pipe.Width + player.Width && player.Top + player.Height >= pipe.Top && player.Top < pipe.Top)
             {
 
                 jump = false;
                 force = 0;
                 player.Top = pipe.Location.Y - player.Height;
-                /*
+                
                 player.Top = screen.Height - pipe.Height - player.Height;
                 force = 0;
                 jump = false;
                 player.Image = Image.FromFile("marioyoshi.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
-                */
+                
              
             }
 
-                
 
-
-          else
-          {
-              player.Top += 5;
-          }
-            //blacok top
-            if (player.Left + player.Width > pipe.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top + player.Height >= block.Top && player.Top < block.Top)
+            //blcok top
+            if (player.Left + player.Width > block.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top + player.Height >= block.Top && player.Top < block.Top)
             {
 
                 jump = false;
@@ -172,30 +186,45 @@ namespace _8_bit_lok
             {
                 force = -1;
             }
+
+
+            //------------------------------------------------------------------------------------------------------------//
+
+            //blcok top
+            if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top + player.Height >= block1.Top && player.Top < block1.Top)
+            {
+
+                jump = false;
+                force = 0;
+                player.Top = block1.Location.Y - player.Height;
+
+            }
+
+            //block head
+            if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top - block1.Bottom <= 10 && player.Top - block1.Top > -10)
+            {
+                force = -1;
+            }
            
             
             
 
 
-
-            //test --------------------------------------
+            //victory
             //þegar player kemur við hlut
             if (player.Left + player.Width - 1 > win.Left && player.Left + player.Width + 5 < win.Left + win.Width + player.Width && player.Top + player.Height >= win.Top && player.Top < win.Top)
             {
                 player.Top = screen.Height - win.Height - player.Height;
-                
 
-                
+
+
                 if (player.Bounds.IntersectsWith(win.Bounds)) ;
-             {
-                 
-                 Win end = new Win();
-                 end.Show();
-
-                 
-
-                 
-             }
+                 {
+                     this.Visible = false;//þetta felur formið sem er verið ad spila í 
+                     //anað form (victory) byrtist
+                     Win end = new Win();
+                     end.Show();
+                 }
             }
            
         }
@@ -251,6 +280,10 @@ namespace _8_bit_lok
 
             
         }
+
+        
+
+
 
 
 
