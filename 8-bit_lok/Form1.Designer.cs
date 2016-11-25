@@ -33,7 +33,7 @@
             this.screen = new System.Windows.Forms.Panel();
             this.time1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lava = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.block4 = new System.Windows.Forms.PictureBox();
             this.block3 = new System.Windows.Forms.PictureBox();
@@ -42,10 +42,8 @@
             this.pipe = new System.Windows.Forms.PictureBox();
             this.win = new System.Windows.Forms.PictureBox();
             this.block = new System.Windows.Forms.PictureBox();
-            this.WallRight = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
-            this.WallLeft = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -54,10 +52,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.WallLeft = new System.Windows.Forms.PictureBox();
+            this.WallRight = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.canv1.SuspendLayout();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lava)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block3)).BeginInit();
@@ -66,10 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WallRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WallLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -78,6 +77,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WallLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WallRight)).BeginInit();
             this.SuspendLayout();
             // 
             // canv1
@@ -93,6 +95,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.DodgerBlue;
+            this.screen.Controls.Add(this.lava);
             this.screen.Controls.Add(this.pictureBox4);
             this.screen.Controls.Add(this.block4);
             this.screen.Controls.Add(this.block3);
@@ -125,15 +128,14 @@
             this.time1.Interval = 1;
             this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
-            // pictureBox6
+            // lava
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::_8_bit_lok.Properties.Resources.castle;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 509);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(182, 193);
-            this.pictureBox6.TabIndex = 26;
-            this.pictureBox6.TabStop = false;
+            this.lava.BackgroundImage = global::_8_bit_lok.Properties.Resources.Lava;
+            this.lava.Location = new System.Drawing.Point(939, 509);
+            this.lava.Name = "lava";
+            this.lava.Size = new System.Drawing.Size(152, 31);
+            this.lava.TabIndex = 27;
+            this.lava.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -149,9 +151,9 @@
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
             this.block4.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block4.Location = new System.Drawing.Point(979, 563);
+            this.block4.Location = new System.Drawing.Point(939, 538);
             this.block4.Name = "block4";
-            this.block4.Size = new System.Drawing.Size(152, 46);
+            this.block4.Size = new System.Drawing.Size(152, 33);
             this.block4.TabIndex = 24;
             this.block4.TabStop = false;
             // 
@@ -219,15 +221,6 @@
             this.block.TabIndex = 17;
             this.block.TabStop = false;
             // 
-            // WallRight
-            // 
-            this.WallRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.WallRight.Location = new System.Drawing.Point(1658, 0);
-            this.WallRight.Name = "WallRight";
-            this.WallRight.Size = new System.Drawing.Size(10, 702);
-            this.WallRight.TabIndex = 12;
-            this.WallRight.TabStop = false;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
@@ -248,15 +241,6 @@
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.player.TabIndex = 0;
             this.player.TabStop = false;
-            // 
-            // WallLeft
-            // 
-            this.WallLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.WallLeft.Location = new System.Drawing.Point(0, 0);
-            this.WallLeft.Name = "WallLeft";
-            this.WallLeft.Size = new System.Drawing.Size(10, 702);
-            this.WallLeft.TabIndex = 11;
-            this.WallLeft.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -318,7 +302,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::_8_bit_lok.Properties.Resources.bushpaint2;
-            this.pictureBox2.Location = new System.Drawing.Point(1267, 635);
+            this.pictureBox2.Location = new System.Drawing.Point(1401, 635);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -335,6 +319,34 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::_8_bit_lok.Properties.Resources.castle;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 509);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(182, 193);
+            this.pictureBox6.TabIndex = 26;
+            this.pictureBox6.TabStop = false;
+            // 
+            // WallLeft
+            // 
+            this.WallLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.WallLeft.Location = new System.Drawing.Point(0, 0);
+            this.WallLeft.Name = "WallLeft";
+            this.WallLeft.Size = new System.Drawing.Size(10, 702);
+            this.WallLeft.TabIndex = 11;
+            this.WallLeft.TabStop = false;
+            // 
+            // WallRight
+            // 
+            this.WallRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.WallRight.Location = new System.Drawing.Point(1658, 0);
+            this.WallRight.Name = "WallRight";
+            this.WallRight.Size = new System.Drawing.Size(10, 702);
+            this.WallRight.TabIndex = 12;
+            this.WallRight.TabStop = false;
             // 
             // panel1
             // 
@@ -360,7 +372,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.canv1.ResumeLayout(false);
             this.screen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lava)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block3)).EndInit();
@@ -369,10 +381,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WallRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WallLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -381,6 +391,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WallLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WallRight)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,6 +426,7 @@
         private System.Windows.Forms.PictureBox block3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox lava;
 
     }
 }

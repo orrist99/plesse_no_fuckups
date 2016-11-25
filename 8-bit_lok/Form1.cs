@@ -327,6 +327,26 @@ namespace _8_bit_lok
                      end.Show();
                  }
             }
+
+
+
+
+            //victory
+            //þegar player kemur við hlut
+            if (player.Left + player.Width - 1 > lava.Left && player.Left + player.Width + 5 < lava.Left + lava.Width + player.Width && player.Top + player.Height >= lava.Top && player.Top < lava.Top)
+            {
+                player.Top = screen.Height - lava.Height - player.Height;
+
+
+
+                if (player.Bounds.IntersectsWith(lava.Bounds)) ;
+                {
+                    this.Visible = false;//þetta felur formið sem er verið ad spila í 
+                    //anað form (victory) byrtist
+                     Form2 rip = new Form2();
+                     rip.Show();
+                }
+            }
            
         }
 

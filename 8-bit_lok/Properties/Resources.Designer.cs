@@ -273,6 +273,16 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lava {
+            get {
+                object obj = ResourceManager.GetObject("Lava", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mario {
             get {
                 object obj = ResourceManager.GetObject("mario", resourceCulture);
@@ -506,6 +516,16 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap test2 {
             get {
                 object obj = ResourceManager.GetObject("test2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tombstone {
+            get {
+                object obj = ResourceManager.GetObject("tombstone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
