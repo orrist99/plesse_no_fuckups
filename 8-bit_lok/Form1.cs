@@ -95,7 +95,7 @@ namespace _8_bit_lok
                 right = false;
             }
 
-            //---------------------------------------------------------------------------------------------------------//
+            //--------------------------------------------------block1-------------------------------------------------//
 
             //vinstri hlið á block1
             if (player.Left < block1.Right && player.Right > block1.Left + player.Width && player.Bottom < block1.Bottom && player.Bottom > block1.Top)
@@ -109,6 +109,49 @@ namespace _8_bit_lok
                 right = false;
             }
 
+            //--------------------------------------------------block2-------------------------------------------------//
+
+            //vinstri hlið á block2
+            if (player.Left < block2.Right && player.Right > block2.Left + player.Width && player.Bottom < block2.Bottom && player.Bottom > block2.Top)
+            {
+                left = false;
+            }
+
+            //hægri hlið á block2
+            if (player.Right > block2.Left && player.Left < block2.Right - player.Width && player.Bottom < block2.Bottom && player.Bottom > block2.Top)
+            {
+                right = false;
+            }
+
+            //--------------------------------------------------block3-------------------------------------------------//
+
+
+            //vinstri hlið á block3
+            if (player.Left < block3.Right && player.Right > block3.Left + player.Width && player.Bottom < block3.Bottom && player.Bottom > block3.Top)
+            {
+                left = false;
+            }
+
+            //hægri hlið á block3
+            if (player.Right > block3.Left && player.Left < block3.Right - player.Width && player.Bottom < block3.Bottom && player.Bottom > block3.Top)
+            {
+                right = false;
+            }
+
+
+            //--------------------------------------------------block4-------------------------------------------------//
+
+            //vinstri hlið á block4
+            if (player.Left < block4.Right && player.Right > block4.Left + player.Width && player.Bottom < block4.Bottom && player.Bottom > block4.Top)
+            {
+                left = false;
+            }
+
+            //hægri hlið á block
+            if (player.Right > block4.Left && player.Left < block4.Right - player.Width && player.Bottom < block4.Bottom && player.Bottom > block4.Top)
+            {
+                right = false;
+            }
 
 
       
@@ -145,6 +188,7 @@ namespace _8_bit_lok
                   player.Image = Image.FromFile("marioyoshi.png");//mynd breytist þegar player er buinn ad hoppa og stendur kyrr
               }
               jump = false;
+
           }
 
 
@@ -154,22 +198,22 @@ namespace _8_bit_lok
           {
               player.Top += 5;
           }
-            //top á pipu
+
+          //top á pipu
           if (player.Left + player.Width > pipe.Left && player.Left + player.Width < pipe.Left + pipe.Width + player.Width && player.Top + player.Height >= pipe.Top && player.Top < pipe.Top)
-            {
+          {
 
-                jump = false;
-                force = 0;
-                player.Top = pipe.Location.Y - player.Height;
-                
-                player.Top = screen.Height - pipe.Height - player.Height;
-                force = 0;
-                jump = false;
-                player.Image = Image.FromFile("marioyoshi.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
-                
-             
-            }
+              jump = false;
+              force = 0;
+              player.Top = pipe.Location.Y - player.Height;
+              player.Image = Image.FromFile("marioyoshi.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
 
+              /*
+              player.Top = screen.Height - pipe.Height - player.Height;
+              force = 0;
+              jump = false;
+              */
+          }
 
             //blcok top
             if (player.Left + player.Width > block.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top + player.Height >= block.Top && player.Top < block.Top)
@@ -188,9 +232,9 @@ namespace _8_bit_lok
             }
 
 
-            //------------------------------------------------------------------------------------------------------------//
+            //-------------------------------------------------block1------------------------------------------------//
 
-            //blcok top
+            //blcok1 top
             if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top + player.Height >= block1.Top && player.Top < block1.Top)
             {
 
@@ -200,12 +244,69 @@ namespace _8_bit_lok
 
             }
 
-            //block head
+            //block1 head
             if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top - block1.Bottom <= 10 && player.Top - block1.Top > -10)
             {
                 force = -1;
             }
-           
+
+
+            //-------------------------------------------------block2------------------------------------------------//
+
+
+            //blcok2 top
+            if (player.Left + player.Width > block2.Left && player.Left + player.Width < block2.Left + block2.Width + player.Width && player.Top + player.Height >= block2.Top && player.Top < block2.Top)
+            {
+
+                jump = false;
+                force = 0;
+                player.Top = block2.Location.Y - player.Height;
+
+            }
+
+            //block2 head
+            if (player.Left + player.Width > block2.Left && player.Left + player.Width < block2.Left + block2.Width + player.Width && player.Top - block2.Bottom <= 10 && player.Top - block2.Top > -10)
+            {
+                force = -1;
+            }
+
+
+            //-------------------------------------------------block3------------------------------------------------//
+            //blcok top3
+            if (player.Left + player.Width > block3.Left && player.Left + player.Width < block3.Left + block3.Width + player.Width && player.Top + player.Height >= block3.Top && player.Top < block3.Top)
+            {
+
+                jump = false;
+                force = 0;
+                player.Top = block3.Location.Y - player.Height;
+
+            }
+
+            //block3 head
+            if (player.Left + player.Width > block3.Left && player.Left + player.Width < block3.Left + block3.Width + player.Width && player.Top - block3.Bottom <= 10 && player.Top - block3.Top > -10)
+            {
+                force = -1;
+            }
+
+
+
+            //-------------------------------------------------block4------------------------------------------------//
+
+            //blcok 4 top
+            if (player.Left + player.Width > block4.Left && player.Left + player.Width < block4.Left + block4.Width + player.Width && player.Top + player.Height >= block4.Top && player.Top < block4.Top)
+            {
+
+                jump = false;
+                force = 0;
+                player.Top = block4.Location.Y - player.Height;
+
+            }
+
+            //block 4 head
+            if (player.Left + player.Width > block4.Left && player.Left + player.Width < block4.Left + block4.Width + player.Width && player.Top - block4.Bottom <= 10 && player.Top - block4.Top > -10)
+            {
+                force = -1;
+            }
             
             
 

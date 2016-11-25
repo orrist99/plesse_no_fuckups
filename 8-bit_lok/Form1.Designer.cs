@@ -31,7 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.canv1 = new System.Windows.Forms.Panel();
             this.screen = new System.Windows.Forms.Panel();
+            this.time1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.block4 = new System.Windows.Forms.PictureBox();
+            this.block3 = new System.Windows.Forms.PictureBox();
+            this.block2 = new System.Windows.Forms.PictureBox();
             this.block1 = new System.Windows.Forms.PictureBox();
             this.pipe = new System.Windows.Forms.PictureBox();
             this.win = new System.Windows.Forms.PictureBox();
@@ -49,13 +55,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.time1 = new System.Windows.Forms.Timer(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.canv1.SuspendLayout();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.win)).BeginInit();
@@ -72,8 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // canv1
@@ -89,17 +93,16 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.DodgerBlue;
-            this.screen.Controls.Add(this.pictureBox13);
-            this.screen.Controls.Add(this.pictureBox7);
-            this.screen.Controls.Add(this.pictureBox6);
+            this.screen.Controls.Add(this.pictureBox4);
+            this.screen.Controls.Add(this.block4);
+            this.screen.Controls.Add(this.block3);
+            this.screen.Controls.Add(this.block2);
             this.screen.Controls.Add(this.block1);
             this.screen.Controls.Add(this.pipe);
             this.screen.Controls.Add(this.win);
             this.screen.Controls.Add(this.block);
-            this.screen.Controls.Add(this.WallRight);
             this.screen.Controls.Add(this.pictureBox8);
             this.screen.Controls.Add(this.player);
-            this.screen.Controls.Add(this.WallLeft);
             this.screen.Controls.Add(this.pictureBox5);
             this.screen.Controls.Add(this.pictureBox9);
             this.screen.Controls.Add(this.pictureBox10);
@@ -108,28 +111,78 @@
             this.screen.Controls.Add(this.pictureBox1);
             this.screen.Controls.Add(this.pictureBox2);
             this.screen.Controls.Add(this.pictureBox3);
+            this.screen.Controls.Add(this.pictureBox6);
+            this.screen.Controls.Add(this.WallLeft);
+            this.screen.Controls.Add(this.WallRight);
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1668, 702);
             this.screen.TabIndex = 1;
             // 
+            // time1
+            // 
+            this.time1.Enabled = true;
+            this.time1.Interval = 1;
+            this.time1.Tick += new System.EventHandler(this.time1_Tick);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.pictureBox6.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.pictureBox6.Location = new System.Drawing.Point(595, 433);
+            this.pictureBox6.Image = global::_8_bit_lok.Properties.Resources.castle;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 509);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(54, 46);
-            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.Size = new System.Drawing.Size(182, 193);
+            this.pictureBox6.TabIndex = 26;
             this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::_8_bit_lok.Properties.Resources.sun1;
+            this.pictureBox4.Location = new System.Drawing.Point(1500, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(187, 162);
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // block4
+            // 
+            this.block4.BackColor = System.Drawing.Color.Transparent;
+            this.block4.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block4.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block4.Location = new System.Drawing.Point(979, 563);
+            this.block4.Name = "block4";
+            this.block4.Size = new System.Drawing.Size(152, 46);
+            this.block4.TabIndex = 24;
+            this.block4.TabStop = false;
+            // 
+            // block3
+            // 
+            this.block3.BackColor = System.Drawing.Color.Transparent;
+            this.block3.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block3.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block3.Location = new System.Drawing.Point(803, 355);
+            this.block3.Name = "block3";
+            this.block3.Size = new System.Drawing.Size(54, 46);
+            this.block3.TabIndex = 23;
+            this.block3.TabStop = false;
+            // 
+            // block2
+            // 
+            this.block2.BackColor = System.Drawing.Color.Transparent;
+            this.block2.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block2.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block2.Location = new System.Drawing.Point(662, 440);
+            this.block2.Name = "block2";
+            this.block2.Size = new System.Drawing.Size(54, 46);
+            this.block2.TabIndex = 22;
+            this.block2.TabStop = false;
             // 
             // block1
             // 
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
             this.block1.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block1.Location = new System.Drawing.Point(380, 515);
+            this.block1.Location = new System.Drawing.Point(500, 525);
             this.block1.Name = "block1";
             this.block1.Size = new System.Drawing.Size(95, 46);
             this.block1.TabIndex = 21;
@@ -139,7 +192,7 @@
             // 
             this.pipe.BackColor = System.Drawing.Color.Transparent;
             this.pipe.Image = global::_8_bit_lok.Properties.Resources.marioPipe;
-            this.pipe.Location = new System.Drawing.Point(200, 569);
+            this.pipe.Location = new System.Drawing.Point(273, 563);
             this.pipe.Margin = new System.Windows.Forms.Padding(0);
             this.pipe.Name = "pipe";
             this.pipe.Size = new System.Drawing.Size(86, 151);
@@ -189,7 +242,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(44, 640);
+            this.player.Location = new System.Drawing.Point(66, 640);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -276,7 +329,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::_8_bit_lok.Properties.Resources.bushpaint2;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 636);
+            this.pictureBox3.Location = new System.Drawing.Point(452, 635);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(102, 113);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -291,34 +344,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1668, 61);
             this.panel1.TabIndex = 2;
-            // 
-            // time1
-            // 
-            this.time1.Enabled = true;
-            this.time1.Interval = 1;
-            this.time1.Tick += new System.EventHandler(this.time1_Tick);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.pictureBox7.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.pictureBox7.Location = new System.Drawing.Point(730, 346);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 46);
-            this.pictureBox7.TabIndex = 23;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.pictureBox13.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.pictureBox13.Location = new System.Drawing.Point(844, 550);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(54, 46);
-            this.pictureBox13.TabIndex = 24;
-            this.pictureBox13.TabStop = false;
             // 
             // Form1
             // 
@@ -336,6 +361,10 @@
             this.canv1.ResumeLayout(false);
             this.screen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.win)).EndInit();
@@ -352,8 +381,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,9 +408,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox block1;
+        private System.Windows.Forms.PictureBox block2;
+        private System.Windows.Forms.PictureBox block4;
+        private System.Windows.Forms.PictureBox block3;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox7;
 
     }
 }
