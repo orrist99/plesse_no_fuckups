@@ -12,12 +12,8 @@ namespace _8_bit_lok
 {
     public partial class Form1 : Form
     {
-        enum Position
-        {
-            Left, Right
-        }
+        
 
-        private Position _objPosition;
         bool right;
         bool left;
         bool jump;
@@ -38,21 +34,7 @@ namespace _8_bit_lok
 
         }
 
-     /*   public void Blokk(PictureBox x)
-        {
-            //vinstri hlið á block3
-            if (player.Left < x.Right && player.Right > x.Left + player.Width && player.Bottom < x.Bottom && player.Bottom > x.Top)
-            {
-                left = false;
-            }
-
-            //hægri hlið á block3
-            if (player.Right > x.Left && player.Left < x.Right - player.Width && player.Bottom < x.Bottom && player.Bottom > x.Top)
-            {
-                right = false;
-            }
-
-        }*/
+     
 
         
 
@@ -105,76 +87,7 @@ namespace _8_bit_lok
 
 
 
-           /* //vinstri hlið á block
-            if (player.Left < block.Right && player.Right > block.Left + player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
-            {
-                left = false;
-            }
-
-            //hægri hlið á block
-            if (player.Right > block.Left && player.Left < block.Right - player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
-            {
-                right = false;
-            }
-
-            //--------------------------------------------------block1-------------------------------------------------//
-           // Blokk(block1);
-            //vinstri hlið á block1
-            if (player.Left < block1.Right && player.Right > block1.Left + player.Width && player.Bottom < block1.Bottom && player.Bottom > block1.Top)
-            {
-                left = false;
-            }
-
-            //hægri hlið á block1
-            if (player.Right > block1.Left && player.Left < block1.Right - player.Width && player.Bottom < block1.Bottom && player.Bottom > block1.Top)
-            {
-                right = false;
-            }
-
-            //--------------------------------------------------block2-------------------------------------------------//
-
-            //vinstri hlið á block2
-            if (player.Left < block2.Right && player.Right > block2.Left + player.Width && player.Bottom < block2.Bottom && player.Bottom > block2.Top)
-            {
-                left = false;
-            }
-
-            //hægri hlið á block2
-            if (player.Right > block2.Left && player.Left < block2.Right - player.Width && player.Bottom < block2.Bottom && player.Bottom > block2.Top)
-            {
-                right = false;
-            }
-
-            //--------------------------------------------------block3-------------------------------------------------//
-
-
-            //vinstri hlið á block3
-            if (player.Left < block3.Right && player.Right > block3.Left + player.Width && player.Bottom < block3.Bottom && player.Bottom > block3.Top)
-            {
-                left = false;
-            }
-
-            //hægri hlið á block3
-            if (player.Right > block3.Left && player.Left < block3.Right - player.Width && player.Bottom < block3.Bottom && player.Bottom > block3.Top)
-            {
-                right = false;
-            }
-
-
-            //--------------------------------------------------block4-------------------------------------------------//
-
-            //vinstri hlið á block4
-            if (player.Left < block4.Right && player.Right > block4.Left + player.Width && player.Bottom < block4.Bottom && player.Bottom > block4.Top)
-            {
-                left = false;
-            }
-
-            //hægri hlið á block
-            if (player.Right > block4.Left && player.Left < block4.Right - player.Width && player.Bottom < block4.Bottom && player.Bottom > block4.Top)
-            {
-                right = false;
-            }
-            */
+           
 
       
               
@@ -230,11 +143,7 @@ namespace _8_bit_lok
               player.Top = pipe.Location.Y - player.Height;
               player.Image = Image.FromFile("marioyoshi.png");//nuna kemur mynd af mario standa þegar hann hefur hoppad ofan á pipuna
 
-              /*
-              player.Top = screen.Height - pipe.Height - player.Height;
-              force = 0;
-              jump = false;
-              */
+              
           }
 
             //blcok top
@@ -336,7 +245,7 @@ namespace _8_bit_lok
             }
              else
              {
-                 block4.Left = 0;
+                 block4.Left = 0; //box kemur aftur
              }
 
             //-------------------------------------------------------------------------------------------------//
@@ -345,19 +254,14 @@ namespace _8_bit_lok
             //enemy
             if (badguy.Left < this.Width)
             {
-                badguy.Left = badguy.Left + 1;
+                badguy.Left = badguy.Left + 2;
             }
-           /* else
-            {
-                badguy.Left = 0;
-            }*/
+           
 
 
             if (player.Left + player.Width - 1 > badguy.Left && player.Left + player.Width + 5 < badguy.Left + badguy.Width + player.Width && player.Top + player.Height >= badguy.Top && player.Top < badguy.Top)
             {
                 player.Top = screen.Height - badguy.Height - player.Height;
-
-
 
                 if (player.Bounds.IntersectsWith(badguy.Bounds)) ;
                  {
