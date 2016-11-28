@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-
-
 namespace _8_bit_lok
 {
     class Gcs
