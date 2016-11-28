@@ -43,3 +43,6 @@ H:\MarioClone\8-bit_lok\obj\Debug\8-bit_lok.csprojResolveAssemblyReference.cache
 H:\MarioClone\8-bit_lok\obj\Debug\_8_bit_lok.Form1.resources
 H:\MarioClone\8-bit_lok\obj\Debug\_8_bit_lok.Properties.Resources.resources
 H:\MarioClone\8-bit_lok\obj\Debug\8-bit_lok.csproj.GenerateResource.Cache
+H:\plesse_no_fuckups\8-bit_lok\bin\Debug\8-bit_lok.exe.config
+H:\plesse_no_fuckups\8-bit_lok\obj\Debug\8-bit_lok.exe
+H:\plesse_no_fuckups\8-bit_lok\obj\Debug\8-bit_lok.pdb
