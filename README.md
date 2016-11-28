@@ -1,2 +1,2 @@
-# red
-yo yo
+# Aron Tanatíp og Orri Steinn
+Mario Leikur
