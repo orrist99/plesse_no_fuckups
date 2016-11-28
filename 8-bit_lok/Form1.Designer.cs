@@ -118,7 +118,6 @@
             this.screen.Controls.Add(this.pictureBox5);
             this.screen.Controls.Add(this.pictureBox9);
             this.screen.Controls.Add(this.pictureBox10);
-            this.screen.Controls.Add(this.pictureBox11);
             this.screen.Controls.Add(this.pictureBox12);
             this.screen.Controls.Add(this.pictureBox1);
             this.screen.Controls.Add(this.pictureBox2);
@@ -129,6 +128,7 @@
             this.screen.Controls.Add(this.lava);
             this.screen.Controls.Add(this.pictureBox7);
             this.screen.Controls.Add(this.pictureBox13);
+            this.screen.Controls.Add(this.pictureBox11);
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1668, 702);
@@ -242,7 +242,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(161, 598);
+            this.player.Location = new System.Drawing.Point(90, 640);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -265,7 +265,7 @@
             this.pictureBox9.Image = global::_8_bit_lok.Properties.Resources.sky;
             this.pictureBox9.Location = new System.Drawing.Point(0, 26);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(504, 265);
+            this.pictureBox9.Size = new System.Drawing.Size(500, 265);
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
             // 
@@ -274,16 +274,16 @@
             this.pictureBox10.Image = global::_8_bit_lok.Properties.Resources.sky;
             this.pictureBox10.Location = new System.Drawing.Point(500, 26);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(504, 265);
+            this.pictureBox10.Size = new System.Drawing.Size(505, 265);
             this.pictureBox10.TabIndex = 10;
             this.pictureBox10.TabStop = false;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::_8_bit_lok.Properties.Resources.sky;
-            this.pictureBox11.Location = new System.Drawing.Point(999, 26);
+            this.pictureBox11.Location = new System.Drawing.Point(1001, 26);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(504, 265);
+            this.pictureBox11.Size = new System.Drawing.Size(502, 265);
             this.pictureBox11.TabIndex = 13;
             this.pictureBox11.TabStop = false;
             // 
