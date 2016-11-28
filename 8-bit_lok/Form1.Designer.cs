@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.canv1 = new System.Windows.Forms.Panel();
             this.screen = new System.Windows.Forms.Panel();
-            this.time1 = new System.Windows.Forms.Timer(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.player = new System.Windows.Forms.PictureBox();
             this.pipe = new System.Windows.Forms.PictureBox();
+            this.time1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
             this.canv1.SuspendLayout();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -53,6 +54,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.screen.Controls.Add(this.button1);
             this.screen.Controls.Add(this.player);
             this.screen.Controls.Add(this.pipe);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,12 +62,6 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1200, 700);
             this.screen.TabIndex = 1;
-            // 
-            // time1
-            // 
-            this.time1.Enabled = true;
-            this.time1.Interval = 1;
-            this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
             // player
             // 
@@ -87,6 +83,21 @@
             this.pipe.Size = new System.Drawing.Size(140, 213);
             this.pipe.TabIndex = 0;
             this.pipe.TabStop = false;
+            // 
+            // time1
+            // 
+            this.time1.Enabled = true;
+            this.time1.Interval = 1;
+            this.time1.Tick += new System.EventHandler(this.time1_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(917, 111);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -117,6 +128,7 @@
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox pipe;
+        private System.Windows.Forms.Button button1;
 
     }
 }
