@@ -12,12 +12,12 @@ namespace _8_bit_lok
 {
     public partial class Form1 : Form
     {
-        
 
+       
         bool right;
         bool left;
         bool jump;
-        int G = 25;//hversu hátt mario fer up þegar hann hoppar
+        int G = 25;//hversu hátt mario fer upp þegar hann hoppar
         int force;
         int index = 0;
 
@@ -28,21 +28,35 @@ namespace _8_bit_lok
         public Form1()
         {
             InitializeComponent();
-            
-
-            //player.Top = screen.Height - player.Height;
-
         }
 
      
+        //aðferð fyrir block
+        public void Blokk(PictureBox x)
+         {
+            
+            if (player.Left + player.Width > x.Left && player.Left + player.Width < x.Left + x.Width + player.Width && player.Top + player.Height >= x.Top && player.Top < x.Top)
+            {
 
-        
+                jump = false;
+                force = 0;
+                player.Top = x.Location.Y - player.Height;
+
+            }
+
+            //block head
+            if (player.Left + player.Width > x.Left && player.Left + player.Width < x.Left + x.Width + player.Width && player.Top - x.Bottom <= 10 && player.Top - x.Top > -10)
+            {
+                force = -1;
+            }
+          }
+
+
 
         private void time1_Tick(object sender, EventArgs e)
         {
 
-            //hlaupa gif spilar replayar
-
+            //mario að hlaupa gif  spilar aftur 
             index++;
             if (right == true && index % 15 == 0)
             {
@@ -53,6 +67,9 @@ namespace _8_bit_lok
             {
                 player.Image = Image.FromFile("marioandyoshi2.gif");
             }
+
+
+
 
             //vinstri hlið á pipu
             if (player.Right > pipe.Left && player.Left < pipe.Right - player.Width / 2 && player.Bottom > pipe.Top)
@@ -66,13 +83,7 @@ namespace _8_bit_lok
                 left = false;
             }
 
-            
-           
-
-            
-
-
-
+            //svo mario fari ekki af mappinu
             //hægri hlið á wall
             if (player.Left < pipe.Right && player.Right > pipe.Left + player.Width / 2 && player.Bottom > pipe.Top)
             {
@@ -105,7 +116,7 @@ namespace _8_bit_lok
             //jump
           if (jump == true)
             {
-              //ef player hefur hopad adur
+              //ef player hefur hopad  
                 player.Top -= force;
                 force -= 1;
             }
@@ -162,83 +173,15 @@ namespace _8_bit_lok
                 force = -1;
             }
 
-
-            //-------------------------------------------------block1------------------------------------------------//
-
-            //blcok1 top
-            if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top + player.Height >= block1.Top && player.Top < block1.Top)
-            {
-
-                jump = false;
-                force = 0;
-                player.Top = block1.Location.Y - player.Height;
-
-            }
-
-            //block1 head
-            if (player.Left + player.Width > block1.Left && player.Left + player.Width < block1.Left + block1.Width + player.Width && player.Top - block1.Bottom <= 10 && player.Top - block1.Top > -10)
-            {
-                force = -1;
-            }
+            //her er kallað í Blokk aðferð//
+            Blokk(block1);
+            Blokk(block2);
+            Blokk(block3);
+            Blokk(block4);
+           //-----------------------//
 
 
-            //-------------------------------------------------block2------------------------------------------------//
-
-
-            //blcok2 top
-            if (player.Left + player.Width > block2.Left && player.Left + player.Width < block2.Left + block2.Width + player.Width && player.Top + player.Height >= block2.Top && player.Top < block2.Top)
-            {
-
-                jump = false;
-                force = 0;
-                player.Top = block2.Location.Y - player.Height;
-
-            }
-
-            //block2 head
-            if (player.Left + player.Width > block2.Left && player.Left + player.Width < block2.Left + block2.Width + player.Width && player.Top - block2.Bottom <= 10 && player.Top - block2.Top > -10)
-            {
-                force = -1;
-            }
-
-
-            //-------------------------------------------------block3------------------------------------------------//
-            //blcok top3
-            if (player.Left + player.Width > block3.Left && player.Left + player.Width < block3.Left + block3.Width + player.Width && player.Top + player.Height >= block3.Top && player.Top < block3.Top)
-            {
-
-                jump = false;
-                force = 0;
-                player.Top = block3.Location.Y - player.Height;
-
-            }
-
-            //block3 head
-            if (player.Left + player.Width > block3.Left && player.Left + player.Width < block3.Left + block3.Width + player.Width && player.Top - block3.Bottom <= 10 && player.Top - block3.Top > -10)
-            {
-                force = -1;
-            }
-
-
-
-            //-------------------------------------------------block4------------------------------------------------//
-
-            //blcok 4 top
-            if (player.Left + player.Width > block4.Left && player.Left + player.Width < block4.Left + block4.Width + player.Width && player.Top + player.Height >= block4.Top && player.Top < block4.Top)
-            {
-
-                jump = false;
-                force = 0;
-                player.Top = block4.Location.Y - player.Height;
-
-            }
-
-            //block 4 head
-            if (player.Left + player.Width > block4.Left && player.Left + player.Width < block4.Left + block4.Width + player.Width && player.Top - block4.Bottom <= 10 && player.Top - block4.Top > -10)
-            {
-                force = -1;
-            }
-
+            //þetta ef svo boxið hreifist 
             if (block4.Left < this.Width)
             {
                 block4.Left = block4.Left + 3;
@@ -256,6 +199,10 @@ namespace _8_bit_lok
             {
                 badguy.Left = badguy.Left + 2;
             }
+            
+            
+
+
            
 
 

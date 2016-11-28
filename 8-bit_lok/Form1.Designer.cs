@@ -137,10 +137,10 @@
             // badguy
             // 
             this.badguy.BackColor = System.Drawing.Color.Transparent;
-            this.badguy.Image = global::_8_bit_lok.Properties.Resources.enemy2;
-            this.badguy.Location = new System.Drawing.Point(560, 655);
+            this.badguy.Image = global::_8_bit_lok.Properties.Resources.goomba2;
+            this.badguy.Location = new System.Drawing.Point(682, 659);
             this.badguy.Name = "badguy";
-            this.badguy.Size = new System.Drawing.Size(54, 44);
+            this.badguy.Size = new System.Drawing.Size(54, 43);
             this.badguy.TabIndex = 30;
             this.badguy.TabStop = false;
             // 
@@ -242,7 +242,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(103, 640);
+            this.player.Location = new System.Drawing.Point(291, 501);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -358,7 +358,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::_8_bit_lok.Properties.Resources.rock;
-            this.pictureBox7.Location = new System.Drawing.Point(972, 655);
+            this.pictureBox7.Location = new System.Drawing.Point(972, 659);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(51, 46);
             this.pictureBox7.TabIndex = 28;
@@ -367,7 +367,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::_8_bit_lok.Properties.Resources.rock3;
-            this.pictureBox13.Location = new System.Drawing.Point(1341, 656);
+            this.pictureBox13.Location = new System.Drawing.Point(1341, 660);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(45, 45);
             this.pictureBox13.TabIndex = 29;

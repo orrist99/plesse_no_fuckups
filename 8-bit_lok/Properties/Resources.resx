@@ -133,6 +133,9 @@
   <data name="cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="enemy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemy2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="castle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\castle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,9 +144,6 @@
   </data>
   <data name="bush" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bush.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="enemy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enemy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mariosky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mariosky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +190,9 @@
   <data name="mariocloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mariocloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Goomba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Goomba.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bushpaint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bushpaint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -210,6 +213,9 @@
   </data>
   <data name="fireworks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fireworks.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +244,8 @@
   <data name="marioworld1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marioworld1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\stand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="enemy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enemy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ladder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ladder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,7 +283,10 @@
   <data name="not_mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgres.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enemy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enemy2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Goomba1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Goomba1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goomba2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goomba2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
