@@ -19,6 +19,7 @@ namespace _8_bit_lok
         int force;
         int index = 0;
         
+        
 
         public Form1()
         {
@@ -323,6 +324,7 @@ namespace _8_bit_lok
                  {
                      this.Visible = false;//þetta felur formið sem er verið ad spila í 
                      //anað form (victory) byrtist
+                     time1.Stop();//stopa time one svo kodin runnar ekki þvi annars koma 100x forms
                      Win end = new Win();
                      end.Show();
                  }
@@ -343,6 +345,7 @@ namespace _8_bit_lok
                 {
                     this.Visible = false;//þetta felur formið sem er verið ad spila í 
                     //anað form (victory) byrtist
+                    time1.Stop();//stopa time one svo kodin runnar ekki þvi annars koma 100x forms
                      Form2 rip = new Form2();
                      rip.Show();
                 }
@@ -401,6 +404,8 @@ namespace _8_bit_lok
 
             
         }
+
+        
 
         
 
