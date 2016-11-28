@@ -18,6 +18,8 @@ namespace _8_bit_lok
         int G = 25;//hversu hátt mario fer up þegar hann hoppar
         int force;
         int index = 0;
+
+        
         
         
 
@@ -30,9 +32,21 @@ namespace _8_bit_lok
 
         }
 
-        
+     /*   public void Blokk(PictureBox x)
+        {
+            //vinstri hlið á block3
+            if (player.Left < x.Right && player.Right > x.Left + player.Width && player.Bottom < x.Bottom && player.Bottom > x.Top)
+            {
+                left = false;
+            }
 
-        
+            //hægri hlið á block3
+            if (player.Right > x.Left && player.Left < x.Right - player.Width && player.Bottom < x.Bottom && player.Bottom > x.Top)
+            {
+                right = false;
+            }
+
+        }*/
 
         
 
@@ -40,6 +54,7 @@ namespace _8_bit_lok
         {
 
             //hlaupa gif spilar replayar
+
             index++;
             if (right == true && index % 15 == 0)
             {
@@ -84,7 +99,7 @@ namespace _8_bit_lok
 
 
 
-            //vinstri hlið á block
+           /* //vinstri hlið á block
             if (player.Left < block.Right && player.Right > block.Left + player.Width && player.Bottom < block.Bottom && player.Bottom > block.Top)
             {
                 left = false;
@@ -97,7 +112,7 @@ namespace _8_bit_lok
             }
 
             //--------------------------------------------------block1-------------------------------------------------//
-
+           // Blokk(block1);
             //vinstri hlið á block1
             if (player.Left < block1.Right && player.Right > block1.Left + player.Width && player.Bottom < block1.Bottom && player.Bottom > block1.Top)
             {
@@ -153,7 +168,7 @@ namespace _8_bit_lok
             {
                 right = false;
             }
-
+            */
 
       
               
@@ -358,13 +373,11 @@ namespace _8_bit_lok
             if (e.KeyCode == Keys.Right)
             {
                 right = true;
-                //player.Image = Image.FromFile("marioandyosi.gif");//þessi mynd kemur þegar mario fer til hægri
             }
 
             if (e.KeyCode == Keys.Left)
             {
                 left = true;
-                //player.Image = Image.FromFile("walk_l.gif");//þessi mynd kemur þegar mario fer til vinstri
             }
 
             if (e.KeyCode == Keys.Escape)
@@ -404,6 +417,8 @@ namespace _8_bit_lok
 
             
         }
+
+        
 
         
 
