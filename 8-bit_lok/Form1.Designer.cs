@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.canv1 = new System.Windows.Forms.Panel();
             this.screen = new System.Windows.Forms.Panel();
-            this.Enemy = new System.Windows.Forms.PictureBox();
+            this.badguy = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.block4 = new System.Windows.Forms.PictureBox();
             this.block3 = new System.Windows.Forms.PictureBox();
@@ -45,7 +45,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,13 +55,14 @@
             this.lava = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.time1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.canv1.SuspendLayout();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Enemy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.badguy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block3)).BeginInit();
@@ -76,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lava)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +104,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.DodgerBlue;
-            this.screen.Controls.Add(this.Enemy);
+            this.screen.Controls.Add(this.badguy);
             this.screen.Controls.Add(this.pictureBox4);
             this.screen.Controls.Add(this.block4);
             this.screen.Controls.Add(this.block3);
@@ -134,15 +134,15 @@
             this.screen.Size = new System.Drawing.Size(1668, 702);
             this.screen.TabIndex = 1;
             // 
-            // Enemy
+            // badguy
             // 
-            this.Enemy.BackColor = System.Drawing.Color.Transparent;
-            this.Enemy.Image = global::_8_bit_lok.Properties.Resources.enemy2;
-            this.Enemy.Location = new System.Drawing.Point(642, 655);
-            this.Enemy.Name = "Enemy";
-            this.Enemy.Size = new System.Drawing.Size(54, 44);
-            this.Enemy.TabIndex = 30;
-            this.Enemy.TabStop = false;
+            this.badguy.BackColor = System.Drawing.Color.Transparent;
+            this.badguy.Image = global::_8_bit_lok.Properties.Resources.enemy2;
+            this.badguy.Location = new System.Drawing.Point(560, 655);
+            this.badguy.Name = "badguy";
+            this.badguy.Size = new System.Drawing.Size(54, 44);
+            this.badguy.TabIndex = 30;
+            this.badguy.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -158,7 +158,7 @@
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
             this.block4.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block4.Location = new System.Drawing.Point(987, 435);
+            this.block4.Location = new System.Drawing.Point(898, 420);
             this.block4.Name = "block4";
             this.block4.Size = new System.Drawing.Size(107, 46);
             this.block4.TabIndex = 24;
@@ -169,7 +169,7 @@
             this.block3.BackColor = System.Drawing.Color.Transparent;
             this.block3.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
             this.block3.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block3.Location = new System.Drawing.Point(805, 268);
+            this.block3.Location = new System.Drawing.Point(826, 245);
             this.block3.Name = "block3";
             this.block3.Size = new System.Drawing.Size(54, 46);
             this.block3.TabIndex = 23;
@@ -180,7 +180,7 @@
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
             this.block2.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block2.Location = new System.Drawing.Point(605, 372);
+            this.block2.Location = new System.Drawing.Point(607, 320);
             this.block2.Name = "block2";
             this.block2.Size = new System.Drawing.Size(54, 46);
             this.block2.TabIndex = 22;
@@ -191,7 +191,7 @@
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
             this.block1.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block1.Location = new System.Drawing.Point(423, 484);
+            this.block1.Location = new System.Drawing.Point(421, 494);
             this.block1.Name = "block1";
             this.block1.Size = new System.Drawing.Size(54, 46);
             this.block1.TabIndex = 21;
@@ -242,7 +242,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(90, 640);
+            this.player.Location = new System.Drawing.Point(103, 640);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -277,15 +277,6 @@
             this.pictureBox10.Size = new System.Drawing.Size(505, 265);
             this.pictureBox10.TabIndex = 10;
             this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::_8_bit_lok.Properties.Resources.sky;
-            this.pictureBox11.Location = new System.Drawing.Point(1001, 26);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(502, 265);
-            this.pictureBox11.TabIndex = 13;
-            this.pictureBox11.TabStop = false;
             // 
             // pictureBox12
             // 
@@ -382,6 +373,15 @@
             this.pictureBox13.TabIndex = 29;
             this.pictureBox13.TabStop = false;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::_8_bit_lok.Properties.Resources.sky;
+            this.pictureBox11.Location = new System.Drawing.Point(1001, 26);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(502, 265);
+            this.pictureBox11.TabIndex = 13;
+            this.pictureBox11.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::_8_bit_lok.Properties.Resources.ground;
@@ -422,7 +422,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.canv1.ResumeLayout(false);
             this.screen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Enemy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.badguy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block3)).EndInit();
@@ -436,7 +436,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -447,6 +446,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lava)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
@@ -485,7 +485,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox Enemy;
+        private System.Windows.Forms.PictureBox badguy;
 
     }
 }

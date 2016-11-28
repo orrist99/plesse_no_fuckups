@@ -11,7 +11,13 @@ using System.Runtime.InteropServices;
 namespace _8_bit_lok
 {
     public partial class Form1 : Form
-    {  
+    {
+        enum Position
+        {
+            Left, Right
+        }
+
+        private Position _objPosition;
         bool right;
         bool left;
         bool jump;
@@ -323,7 +329,50 @@ namespace _8_bit_lok
             {
                 force = -1;
             }
+
+            if (block4.Left < this.Width)
+            {
+                block4.Left = block4.Left + 3;
+            }
+             else
+             {
+                 block4.Left = 0;
+             }
+
+            //-------------------------------------------------------------------------------------------------//
+
+
+            //enemy
+            if (badguy.Left < this.Width)
+            {
+                badguy.Left = badguy.Left + 1;
+            }
+           /* else
+            {
+                badguy.Left = 0;
+            }*/
+
+
+            if (player.Left + player.Width - 1 > badguy.Left && player.Left + player.Width + 5 < badguy.Left + badguy.Width + player.Width && player.Top + player.Height >= badguy.Top && player.Top < badguy.Top)
+            {
+                player.Top = screen.Height - badguy.Height - player.Height;
+
+
+
+                if (player.Bounds.IntersectsWith(badguy.Bounds)) ;
+                 {
+                     this.Visible = false;//þetta felur formið sem er verið ad spila í 
+                     //anað form byrtist
+                     time1.Stop();//stopa time one svo kodin runnar ekki þvi annars koma 100x forms
+                     Form2 rip = new Form2();
+                     rip.Show();
+                 }
+
+            }
             
+            
+
+
             
 
 
@@ -348,8 +397,8 @@ namespace _8_bit_lok
 
 
 
-            //victory
-            //þegar player kemur við hlut
+            
+            //þegar player kemur við lava
             if (player.Left + player.Width - 1 > lava.Left && player.Left + player.Width + 5 < lava.Left + lava.Width + player.Width && player.Top + player.Height >= lava.Top && player.Top < lava.Top)
             {
                 player.Top = screen.Height - lava.Height - player.Height;
