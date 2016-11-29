@@ -195,16 +195,24 @@ namespace _8_bit_lok
 
 
             //enemy
-            if (badguy.Left < this.Width)
+           /* if (badguy.Left < this.Width)
             {
                 badguy.Left = badguy.Left + 2;
             }
+
+           if (badguy.Left < this.Width)
+            {
+                 badguy.Left + 2;
+            }*/
+
+            
+
             
             
 
 
            
-
+            //þegar hann kemur við goomba ;(
 
             if (player.Left + player.Width - 1 > badguy.Left && player.Left + player.Width + 5 < badguy.Left + badguy.Width + player.Width && player.Top + player.Height >= badguy.Top && player.Top < badguy.Top)
             {
@@ -227,7 +235,7 @@ namespace _8_bit_lok
             
 
 
-            //victory
+            //Level 2 opnar
             //þegar player kemur við hlut
             if (player.Left + player.Width - 1 > win.Left && player.Left + player.Width + 5 < win.Left + win.Width + player.Width && player.Top + player.Height >= win.Top && player.Top < win.Top)
             {
@@ -240,8 +248,8 @@ namespace _8_bit_lok
                      this.Visible = false;//þetta felur formið sem er verið ad spila í 
                      //anað form (victory) byrtist
                      time1.Stop();//stopa time one svo kodin runnar ekki þvi annars koma 100x forms
-                     Win end = new Win();
-                     end.Show();
+                     Level2 level2 = new Level2();
+                     level2.Show();
                  }
             }
 
@@ -249,7 +257,7 @@ namespace _8_bit_lok
 
 
             
-            //þegar player kemur við lava
+            //þegar player kemur við hraunið
             if (player.Left + player.Width - 1 > lava.Left && player.Left + player.Width + 5 < lava.Left + lava.Width + player.Width && player.Top + player.Height >= lava.Top && player.Top < lava.Top)
             {
                 player.Top = screen.Height - lava.Height - player.Height;
@@ -317,18 +325,6 @@ namespace _8_bit_lok
 
             
         }
-
-        
-
-        
-
-        
-
-
-
-
-
-       
     }
 }
  
