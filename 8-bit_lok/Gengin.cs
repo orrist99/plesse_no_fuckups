@@ -47,7 +47,7 @@ namespace _8_bit_lok
              
             int framesrander = 0;
             long starttime = Environment.TickCount;
-            long endtime = 0;
+            
 
             Bitmap frame = new Bitmap(Gcs.can_w, Gcs.can_h);
             Graphics frameGraphics = Graphics.FromImage(frame);
