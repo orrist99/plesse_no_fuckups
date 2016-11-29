@@ -79,6 +79,8 @@ namespace _8_bit_lok
             Blokk(block2);
             Blokk(block3);
             Blokk(block4);
+            Blokk(block5);
+            Blokk(block6);
 
 
             //þetta ef svo boxið hreifist 
@@ -89,6 +91,16 @@ namespace _8_bit_lok
             else
             {
                 block3.Left = 0; //box kemur aftur
+            }
+
+            //fyrir hitt blockið
+            if (block6.Left < this.Width)
+            {
+                block6.Left = block6.Left + 3;
+            }
+            else
+            {
+                block6.Left = 0; //box kemur aftur
             }
 
 
