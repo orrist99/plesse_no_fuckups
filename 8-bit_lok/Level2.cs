@@ -77,7 +77,19 @@ namespace _8_bit_lok
 
             Blokk(block1);
             Blokk(block2);
+            Blokk(block3);
             Blokk(block4);
+
+
+            //þetta ef svo boxið hreifist 
+            if (block3.Left < this.Width)
+            {
+                block3.Left = block3.Left + 3;
+            }
+            else
+            {
+                block3.Left = 0; //box kemur aftur
+            }
 
 
             if (player.Top + player.Height >= screen.Height)

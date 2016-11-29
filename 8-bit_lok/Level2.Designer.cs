@@ -54,13 +54,13 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.screen.Controls.Add(this.block4);
+            this.screen.Controls.Add(this.block3);
+            this.screen.Controls.Add(this.block1);
             this.screen.Controls.Add(this.player);
             this.screen.Controls.Add(this.lava);
             this.screen.Controls.Add(this.block);
-            this.screen.Controls.Add(this.block4);
             this.screen.Controls.Add(this.block2);
-            this.screen.Controls.Add(this.block1);
-            this.screen.Controls.Add(this.block3);
             this.screen.Controls.Add(this.win);
             this.screen.Location = new System.Drawing.Point(0, -2);
             this.screen.Name = "screen";
@@ -77,7 +77,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(21, 479);
+            this.player.Location = new System.Drawing.Point(27, 365);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -97,8 +97,7 @@
             // block
             // 
             this.block.BackColor = System.Drawing.Color.Transparent;
-            this.block.BackgroundImage = global::_8_bit_lok.Properties.Resources.mariofloor2;
-            this.block.Image = global::_8_bit_lok.Properties.Resources.mariofloor2;
+            this.block.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
             this.block.Location = new System.Drawing.Point(1298, 340);
             this.block.Name = "block";
             this.block.Size = new System.Drawing.Size(327, 46);
@@ -109,7 +108,7 @@
             // 
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
-            this.block4.Location = new System.Drawing.Point(666, 420);
+            this.block4.Location = new System.Drawing.Point(561, 378);
             this.block4.Name = "block4";
             this.block4.Size = new System.Drawing.Size(107, 46);
             this.block4.TabIndex = 41;
@@ -119,7 +118,7 @@
             // 
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
-            this.block2.Location = new System.Drawing.Point(932, 251);
+            this.block2.Location = new System.Drawing.Point(876, 365);
             this.block2.Name = "block2";
             this.block2.Size = new System.Drawing.Size(54, 46);
             this.block2.TabIndex = 40;
@@ -129,7 +128,7 @@
             // 
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
-            this.block1.Location = new System.Drawing.Point(3, 544);
+            this.block1.Location = new System.Drawing.Point(3, 475);
             this.block1.Name = "block1";
             this.block1.Size = new System.Drawing.Size(162, 41);
             this.block1.TabIndex = 39;
@@ -138,11 +137,11 @@
             // block3
             // 
             this.block3.BackColor = System.Drawing.Color.Transparent;
-            this.block3.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
-            this.block3.Location = new System.Drawing.Point(347, 501);
+            this.block3.BackgroundImage = global::_8_bit_lok.Properties.Resources.woodenplankcropped;
+            this.block3.Location = new System.Drawing.Point(0, 551);
             this.block3.Margin = new System.Windows.Forms.Padding(0);
             this.block3.Name = "block3";
-            this.block3.Size = new System.Drawing.Size(131, 47);
+            this.block3.Size = new System.Drawing.Size(119, 12);
             this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block3.TabIndex = 32;
             this.block3.TabStop = false;

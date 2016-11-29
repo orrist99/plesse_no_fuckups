@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.canv1 = new System.Windows.Forms.Panel();
             this.screen = new System.Windows.Forms.Panel();
+            this.time1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.block = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.badguy = new System.Windows.Forms.PictureBox();
@@ -59,8 +61,6 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.time1 = new System.Windows.Forms.Timer(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.canv1.SuspendLayout();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
@@ -136,6 +136,12 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1668, 702);
             this.screen.TabIndex = 1;
+            // 
+            // time1
+            // 
+            this.time1.Enabled = true;
+            this.time1.Interval = 1;
+            this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
             // block
             // 
@@ -256,7 +262,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(1389, 407);
+            this.player.Location = new System.Drawing.Point(98, 635);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -414,12 +420,6 @@
             this.pictureBox14.Size = new System.Drawing.Size(329, 76);
             this.pictureBox14.TabIndex = 28;
             this.pictureBox14.TabStop = false;
-            // 
-            // time1
-            // 
-            this.time1.Enabled = true;
-            this.time1.Interval = 1;
-            this.time1.Tick += new System.EventHandler(this.time1_Tick);
             // 
             // Form1
             // 
