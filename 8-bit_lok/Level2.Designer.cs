@@ -58,6 +58,7 @@
             // screen
             // 
             this.screen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.screen.Controls.Add(this.block5);
             this.screen.Controls.Add(this.block6);
             this.screen.Controls.Add(this.spawnpipa);
             this.screen.Controls.Add(this.block4);
@@ -65,7 +66,6 @@
             this.screen.Controls.Add(this.block1);
             this.screen.Controls.Add(this.player);
             this.screen.Controls.Add(this.lava);
-            this.screen.Controls.Add(this.block5);
             this.screen.Controls.Add(this.block2);
             this.screen.Controls.Add(this.win);
             this.screen.Location = new System.Drawing.Point(0, -2);
@@ -83,9 +83,9 @@
             // 
             this.spawnpipa.BackColor = System.Drawing.Color.Transparent;
             this.spawnpipa.Image = global::_8_bit_lok.Properties.Resources.pipeLevel2;
-            this.spawnpipa.Location = new System.Drawing.Point(12, 3);
+            this.spawnpipa.Location = new System.Drawing.Point(12, 0);
             this.spawnpipa.Name = "spawnpipa";
-            this.spawnpipa.Size = new System.Drawing.Size(116, 157);
+            this.spawnpipa.Size = new System.Drawing.Size(116, 155);
             this.spawnpipa.TabIndex = 48;
             this.spawnpipa.TabStop = false;
             // 
@@ -93,9 +93,9 @@
             // 
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
-            this.block4.Location = new System.Drawing.Point(561, 378);
+            this.block4.Location = new System.Drawing.Point(534, 365);
             this.block4.Name = "block4";
-            this.block4.Size = new System.Drawing.Size(107, 46);
+            this.block4.Size = new System.Drawing.Size(107, 151);
             this.block4.TabIndex = 41;
             this.block4.TabStop = false;
             // 
@@ -125,7 +125,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::_8_bit_lok.Properties.Resources.marioyoshi;
-            this.player.Location = new System.Drawing.Point(46, 36);
+            this.player.Location = new System.Drawing.Point(42, 3);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(52, 59);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -156,9 +156,9 @@
             // 
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImage = global::_8_bit_lok.Properties.Resources.Blueblock5;
-            this.block2.Location = new System.Drawing.Point(876, 365);
+            this.block2.Location = new System.Drawing.Point(858, 365);
             this.block2.Name = "block2";
-            this.block2.Size = new System.Drawing.Size(54, 46);
+            this.block2.Size = new System.Drawing.Size(107, 151);
             this.block2.TabIndex = 40;
             this.block2.TabStop = false;
             // 

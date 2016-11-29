@@ -27,6 +27,13 @@ namespace _8_bit_lok
         public void Blokk(PictureBox x)
         {
 
+            //hægri hlið á block
+
+            
+            //vinstri hlið á block
+            
+
+
             if (player.Left + player.Width > x.Left && player.Left + player.Width < x.Left + x.Width + player.Width && player.Top + player.Height >= x.Top && player.Top < x.Top)
             {
 
@@ -40,6 +47,19 @@ namespace _8_bit_lok
             if (player.Left + player.Width > x.Left && player.Left + player.Width < x.Left + x.Width + player.Width && player.Top - x.Bottom <= 10 && player.Top - x.Top > -10)
             {
                 force = -1;
+            }
+
+
+
+            if (player.Right > x.Left && player.Left < x.Right - player.Width / 2 && player.Bottom > x.Top)
+            {
+                right = false;
+            }
+
+            //vinstri vegur
+            if (player.Left < x.Right && player.Right > x.Left + player.Width / 2 && player.Bottom > x.Top)
+            {
+                left = false;
             }
         }
         private void time1_Tick(object sender, EventArgs e)
@@ -74,6 +94,7 @@ namespace _8_bit_lok
             }
 
 
+            
 
             Blokk(block1);
             Blokk(block2);

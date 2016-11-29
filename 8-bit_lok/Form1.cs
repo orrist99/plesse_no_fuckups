@@ -84,7 +84,7 @@ namespace _8_bit_lok
             }
 
             //svo mario fari ekki af mappinu
-            //hægri hlið á wall
+            //vinstri hlið á wall
             if (player.Left < pipe.Right && player.Right > pipe.Left + player.Width / 2 && player.Bottom > pipe.Top)
             {
                 left = false;
