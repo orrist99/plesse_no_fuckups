@@ -60,11 +60,19 @@
     <Compile Include="Gengin.cs" />
     <Compile Include="hurra.cs" />
     <Compile Include="Level1.cs" />
+<<<<<<< HEAD
+    <Compile Include="Level3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level3.Designer.cs">
+      <DependentUpon>Level3.cs</DependentUpon>
+=======
     <Compile Include="Level2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Level2.Designer.cs">
       <DependentUpon>Level2.cs</DependentUpon>
+>>>>>>> 516589a3da915d297270a1a37e14619e22843b74
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,8 +88,13 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Level3.resx">
+      <DependentUpon>Level3.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Level2.resx">
       <DependentUpon>Level2.cs</DependentUpon>
+>>>>>>> 516589a3da915d297270a1a37e14619e22843b74
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -263,6 +276,18 @@
     <None Include="Resources\Lava21.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <None Include="Resources\dog.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubic51.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariofloor21.png" />
+=======
     <None Include="Resources\enemy.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -306,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pipeLevel2.png" />
+>>>>>>> 516589a3da915d297270a1a37e14619e22843b74
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
