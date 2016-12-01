@@ -213,6 +213,7 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap cloud1 {
             get {
                 object obj = ResourceManager.GetObject("cloud1", resourceCulture);
@@ -223,6 +224,8 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> af05ba614bedef17276f2ae5b8ec4cf5bcba02c2
         internal static System.Drawing.Bitmap cubic5 {
             get {
                 object obj = ResourceManager.GetObject("cubic5", resourceCulture);
@@ -233,6 +236,7 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap cubic51 {
             get {
                 object obj = ResourceManager.GetObject("cubic51", resourceCulture);
@@ -243,6 +247,8 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> af05ba614bedef17276f2ae5b8ec4cf5bcba02c2
         internal static System.Drawing.Bitmap dirt {
             get {
                 object obj = ResourceManager.GetObject("dirt", resourceCulture);
@@ -254,10 +260,13 @@ namespace _8_bit_lok.Properties {
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
 <<<<<<< HEAD
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap dog {
             get {
                 object obj = ResourceManager.GetObject("dog", resourceCulture);
 =======
+=======
+>>>>>>> af05ba614bedef17276f2ae5b8ec4cf5bcba02c2
         internal static System.Drawing.Bitmap enemy {
             get {
                 object obj = ResourceManager.GetObject("enemy", resourceCulture);
@@ -271,7 +280,10 @@ namespace _8_bit_lok.Properties {
         internal static System.Drawing.Bitmap enemy2 {
             get {
                 object obj = ResourceManager.GetObject("enemy2", resourceCulture);
+<<<<<<< HEAD
 >>>>>>> 516589a3da915d297270a1a37e14619e22843b74
+=======
+>>>>>>> af05ba614bedef17276f2ae5b8ec4cf5bcba02c2
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -519,6 +531,7 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap mariofloor21 {
             get {
                 object obj = ResourceManager.GetObject("mariofloor21", resourceCulture);
@@ -529,6 +542,8 @@ namespace _8_bit_lok.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> af05ba614bedef17276f2ae5b8ec4cf5bcba02c2
         internal static System.Drawing.Bitmap marioPipe {
             get {
                 object obj = ResourceManager.GetObject("marioPipe", resourceCulture);
