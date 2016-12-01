@@ -1,28 +1,11 @@
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\_8_bit_lok.Form1.resources
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\_8_bit_lok.Form2.resources
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\_8_bit_lok.Properties.Resources.resources
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\_8_bit_lok.Win.resources
-<<<<<<< HEAD
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\_8_bit_lok.Form2.resources
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\8-bit_lok.csprojResolveAssemblyReference.cache
 H:\for2\8bitm\8-bit_lok\bin\Debug\8-bit_lok.exe.config
-H:\for2\8bitm\8-bit_lok\obj\Debug\8-bit_lok.exe
-H:\for2\8bitm\8-bit_lok\obj\Debug\8-bit_lok.pdb
 H:\for2\8bitm\8-bit_lok\bin\Debug\8-bit_lok.exe
 H:\for2\8bitm\8-bit_lok\bin\Debug\8-bit_lok.pdb
-H:\for2\8bitm\8-bit_lok\obj\Debug\8-bit_lok.csprojResolveAssemblyReference.cache
 H:\for2\8bitm\8-bit_lok\obj\Debug\_8_bit_lok.Form1.resources
 H:\for2\8bitm\8-bit_lok\obj\Debug\_8_bit_lok.Form2.resources
+H:\for2\8bitm\8-bit_lok\obj\Debug\_8_bit_lok.Level2.resources
 H:\for2\8bitm\8-bit_lok\obj\Debug\_8_bit_lok.Properties.Resources.resources
 H:\for2\8bitm\8-bit_lok\obj\Debug\_8_bit_lok.Win.resources
 H:\for2\8bitm\8-bit_lok\obj\Debug\8-bit_lok.csproj.GenerateResource.Cache
-H:\for2\8bitm\8-bit_lok\obj\Debug\_8_bit_lok.Level3.resources
-=======
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\8-bit_lok.csproj.GenerateResource.Cache
-H:\plesse_no_fuckups\8-bit_lok\bin\Debug\8-bit_lok.exe.config
-H:\plesse_no_fuckups\8-bit_lok\bin\Debug\8-bit_lok.exe
-H:\plesse_no_fuckups\8-bit_lok\bin\Debug\8-bit_lok.pdb
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\8-bit_lok.exe
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\8-bit_lok.pdb
-H:\plesse_no_fuckups\8-bit_lok\obj\Debug\_8_bit_lok.Level2.resources
->>>>>>> 516589a3da915d297270a1a37e14619e22843b74
+H:\for2\8bitm\8-bit_lok\obj\Debug\8-bit_lok.exe
+H:\for2\8bitm\8-bit_lok\obj\Debug\8-bit_lok.pdb
