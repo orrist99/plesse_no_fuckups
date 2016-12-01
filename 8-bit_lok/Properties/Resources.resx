@@ -133,6 +133,9 @@
   <data name="cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="castle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\castle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,9 +181,6 @@
   <data name="mariobush" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mariobush.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lava21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lava21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mariowin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\mariowin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,8 +202,14 @@
   <data name="rock3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rock3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lava2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lava2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="piq_55640_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piq_55640_400x400.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lava21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lava21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marioPipe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marioPipe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="test" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,6 +253,9 @@
   <data name="mariobackgroundtest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mariobackgroundtest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lava2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lava2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tombstone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tombstone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,16 +274,16 @@
   <data name="mariofloor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mariofloor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cblock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cblock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sun1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sun1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="not_mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgres.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cblock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cblock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="marioPipe2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marioPipe2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
