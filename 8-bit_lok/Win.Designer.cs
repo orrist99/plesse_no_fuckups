@@ -100,7 +100,6 @@
             this.Controls.Add(this.pictureBox4);
             this.Name = "Win";
             this.Text = "Win";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Win_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

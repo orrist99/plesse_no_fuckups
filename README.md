@@ -1,6 +1,2 @@
 # red
 yo yo
-
-
-
-sdfasfdas

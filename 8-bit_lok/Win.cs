@@ -16,15 +16,5 @@ namespace _8_bit_lok
         {
             InitializeComponent();
         }
-
-        private void Win_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Form1 l1 = new Form1();
-                l1.Show();
-                Close();
-            }
-        }
     }
 }
