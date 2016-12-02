@@ -16,9 +16,9 @@ nóv 23: þessi dagur fór mest í að designa levelið og búa til búa til col
 
 nóv 24: Á þessum deigi var búið til finish line þar sem player gatt farið á einhvern stað til að vinna levelið og það var bætt við veggjum svo player geti ekki labbað af skjánum.
 
-nóv 25: fór mest í að laga villur og death system bar bætt við í verkefninu.
+nóv 25: fór mest í að laga villur og death system var bætt við í verkefninu.
 
-nóv 28: á þessum degi var bætt við moving block þar sem player gat hoppað ofan á block sem var hreyfandi og ferðast með honnum. Það var lika gert tilraun að hafa óvini en vegna þekkingarskorts okkar náðum við ekki að fá hann til að virka eins og við vildum svo við tókum það úr leikunm. það var lika búið til buinn til aðferð fyrir öll blockin okkar.
+nóv 28: á þessum degi var bætt við moving block þar sem player gat hoppað ofan á block sem var hreyfandi og ferðast með honnum. Það var lika gert tilraun að hafa óvini en vegna þekkingarskorts okkar náðum við ekki að fá hann til að virka eins og við vildum svo við tókum það úr leikunm. það var lika búið til aðferð fyrir öll blockin okkar.
 
 nóv 29: á þessum degi bjó ég (Aron Tanatíp) til level 2 en vegna einhverjum vesenum með verkefnið fór allt úrskeiðis og level 2 eydist.
 
@@ -27,4 +27,3 @@ nóv 30: þessi dagur fór í að búa til level 2 (aftur) en gat ekki latt þa�
 des 1: á þessum degi bjó ég til til menu form þar sem notandi gat valið hvort hann vildi byrja spila eða velja ser level, svo var lika hægt að skoða controls.
 
 des 2: í dag Notaði ég tíman til að skrifa þessa greinargerð á meðan hann Orri bjó til síðasta levelið og lagaði það sem þurfti í menu og level select.
-
