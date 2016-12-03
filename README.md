@@ -1,6 +1,6 @@
 # Greinargerð
 
-Þetta er verkefnið það sem ég (Aron Tanatíp) og Orri steinn unnum í.
+Þetta er verkefnið sem ég (Aron Tanatíp) og Orri steinn unnum í.
 
 Verkskiftingin fór þanning að ég (Aron Tanatíp) sá mest um að kóða verkefnið á meðan hann orri sá um myndirnar með photoshop ofl. Við skiptum verkum á milli okkar þegar við vorum að designa level þar sem hann orri designaði level 3 og ég designaði level 2 en við báðir designuðum level 1 þvi það var fyrsta levelið.
 
